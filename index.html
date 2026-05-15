@@ -2,10 +2,63 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>JuniorCV - Редактор резюме</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="index.html" class="active">Редактор</a>
+            <a href="preview.html">Предпросмотр</a>
+            <a href="templates.html">Шаблоны</a>
+            <button id="themeToggle" class="theme-btn">Тёмная тема</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Создай своё IT-резюме</h1>
+        <form id="resumeForm">
+            <fieldset>
+                <legend>Личная информация</legend>
+                <label>ФИО * <input type="text" id="fullname" placeholder="Иванов Иван Иванович" required></label>
+                <label>Желаемая должность <input type="text" id="position" placeholder="Junior Frontend Developer"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Контакты</legend>
+                <label>Email * <input type="email" id="email" placeholder="example@mail.com" required></label>
+                <label>Телефон <input type="tel" id="phone" placeholder="+7 999 123-45-67"></label>
+                <label>Город <input type="text" id="city" placeholder="Москва"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Технологии (навыки)</legend>
+                <div class="tech-input-group">
+                    <input type="text" id="newTech" placeholder="JavaScript, React, Python...">
+                    <button type="button" id="addTechBtn">Добавить</button>
+                </div>
+                <div id="techList" class="tag-list"></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Проекты</legend>
+                <div id="projectsContainer"></div>
+                <button type="button" id="addProjectBtn" class="secondary">+ Добавить проект</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Образование</legend>
+                <textarea id="education" rows="2" placeholder="Пример: МГУ, прикладная математика, 2022–2026"></textarea>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="button" id="saveBtn" class="primary">Сохранить</button>
+                <button type="button" id="clearBtn" class="danger">Очистить всё</button>
+                <button type="button" id="exportJsonBtn">Экспорт JSON</button>
+            </div>
+            <div id="validationMessage" class="error-message"></div>
+        </form>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
