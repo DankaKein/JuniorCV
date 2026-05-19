@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuniorCV - Шаблоны резюме</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Редактор</a>
+            <a href="preview.html">Предпросмотр</a>
+            <a href="templates.html" class="active">Шаблоны</a>
+            <button id="themeToggle" class="theme-btn">Тёмная тема</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Готовые шаблоны для старта</h1>
+        <div class="templates-grid">
+            <div class="template-card">
+                <h3>Frontend-разработчик</h3>
+                <p>React, TypeScript, HTML/CSS, Git</p>
+                <button data-template="frontend" class="load-template-btn">Заполнить редактор</button>
+            </div>
+            <div class="template-card">
+                <h3>Аналитик данных</h3>
+                <p>Python, Pandas, SQL, Tableau</p>
+                <button data-template="analyst" class="load-template-btn">Заполнить редактор</button>
+            </div>
+            <div class="template-card">
+                <h3>Тестировщик (QA)</h3>
+                <p>Ручное тестирование, Postman, Jira, bug reports</p>
+                <button data-template="qa" class="load-template-btn">Заполнить редактор</button>
+            </div>
+        </div>
+        <section class="tips">
+            <h2>Советы для сильного резюме</h2>
+            <ul>
+                <li>Указывайте только те технологии, которые действительно знаете.</li>
+                <li>Описывайте проекты по схеме: «Что сделал → Какими инструментами → Какой результат».</li>
+                <li>Добавьте ссылку на GitHub или портфолио.</li>
+                <li>Не пишите «коммуникабельность» и «ответственность» — это не информативно.</li>
+                <li>Для Junior важно показать учебные и pet-проекты.</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
